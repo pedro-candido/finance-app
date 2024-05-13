@@ -1,7 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { TUnloggedStackParamList, EUnloggedStackScreens } from "./index.types";
-import { Login } from "../../Modules/Unlogged/Login";
+import { Login } from "../Screens/Login";
 
 const { Navigator, Screen } = createStackNavigator<TUnloggedStackParamList>();
 

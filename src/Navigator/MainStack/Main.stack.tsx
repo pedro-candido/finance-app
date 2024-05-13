@@ -1,14 +1,13 @@
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { EAllStacks, TAllStacksParamList } from "./index.types";
-import { UnloggedStack } from "../Unlogged/Unlogged.stack";
-import { useGlobalStore } from "../../Stores/GlobalStore";
+import { UnloggedStack } from "../../Modules/Unlogged/Navigator";
+import { useBoundStore } from "../../Stores/useBoundStore";
 
-const { Navigator, Group, Screen } =
-  createStackNavigator<TAllStacksParamList>();
+const { Navigator, Screen } = createStackNavigator<TAllStacksParamList>();
 
 export const MainStack = () => {
-  const { isUserLoggedIn } = useGlobalStore();
+  const { isUserLoggedIn } = useBoundStore();
 
   return (
     <Navigator
